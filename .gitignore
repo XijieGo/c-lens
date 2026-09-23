@@ -1,0 +1,23 @@
+# Local model checkpoints, lenses, and fitted readers are linked or supplied
+# by each user and are not part of the public source repository.
+/weight/*
+!/weight/.gitkeep
+
+# Experiment outputs and runtime logs are reproducible local artifacts.
+/results/*
+!/results/.gitkeep
+/logs/*
+!/logs/.gitkeep
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+/build/
+/dist/
+
+# Documentation describing external artifacts is part of the source release.
+!/weight/README.md

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "concept-lens"
+version = "0.1.0"
+description = "Training-free multi-token concept readout with Jacobian lenses"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "accelerate>=0.30",
+    "huggingface_hub",
+    "transformers>=4.45",
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["bindlens", "jlens"]
+
+[tool.setuptools.package-dir]
+bindlens = "src/bindlens"
+jlens = "src/jlens/jlens"
